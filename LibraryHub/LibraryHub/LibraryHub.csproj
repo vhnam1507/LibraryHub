@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72ECC8E5-23EA-466B-A537-285BAC350C92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryHub</RootNamespace>
+    <AssemblyName>LibraryHub</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Form_editPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_editPassword.Designer.cs">
+      <DependentUpon>Form_editPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_entry.Designer.cs">
+      <DependentUpon>Form_entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_bookPicking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_bookPicking.Designer.cs">
+      <DependentUpon>Form_bookPicking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_books.Designer.cs">
+      <DependentUpon>Form_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_booksSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_booksSide.Designer.cs">
+      <DependentUpon>Form_booksSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_borrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_borrowing.Designer.cs">
+      <DependentUpon>Form_borrowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_borrowingSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_borrowingSide.Designer.cs">
+      <DependentUpon>Form_borrowingSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_dashboard.Designer.cs">
+      <DependentUpon>Form_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_myInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_myInfo.Designer.cs">
+      <DependentUpon>Form_myInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_readers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_readers.Designer.cs">
+      <DependentUpon>Form_readers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_admin\Form_readersSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_admin\Form_readersSide.Designer.cs">
+      <DependentUpon>Form_readersSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_books.Designer.cs">
+      <DependentUpon>FormC_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_booksSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_booksSide.Designer.cs">
+      <DependentUpon>FormC_booksSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_borrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_borrowing.Designer.cs">
+      <DependentUpon>FormC_borrowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_borrowingSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_borrowingSide.Designer.cs">
+      <DependentUpon>FormC_borrowingSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_dashboard.Designer.cs">
+      <DependentUpon>FormC_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_myInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_myInfo.Designer.cs">
+      <DependentUpon>FormC_myInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_wishlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_wishlist.Designer.cs">
+      <DependentUpon>FormC_wishlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_wishlistSide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_clients\FormC_wishlistSide.Designer.cs">
+      <DependentUpon>FormC_wishlistSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClasses\Books_proc.cs" />
+    <Compile Include="MyClasses\Borrowings_proc.cs" />
+    <Compile Include="MyClasses\EndOfSelectionEventArgs.cs" />
+    <Compile Include="MyClasses\Readers_proc.cs" />
+    <Compile Include="MyClasses\UserManager.cs" />
+    <Compile Include="MyClasses\Users_proc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Form_editPassword.resx">
+      <DependentUpon>Form_editPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_entry.resx">
+      <DependentUpon>Form_entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_bookPicking.resx">
+      <DependentUpon>Form_bookPicking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_books.resx">
+      <DependentUpon>Form_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_booksSide.resx">
+      <DependentUpon>Form_booksSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_borrowing.resx">
+      <DependentUpon>Form_borrowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_borrowingSide.resx">
+      <DependentUpon>Form_borrowingSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_dashboard.resx">
+      <DependentUpon>Form_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_myInfo.resx">
+      <DependentUpon>Form_myInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_readers.resx">
+      <DependentUpon>Form_readers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_admin\Form_readersSide.resx">
+      <DependentUpon>Form_readersSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_books.resx">
+      <DependentUpon>FormC_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_booksSide.resx">
+      <DependentUpon>FormC_booksSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_borrowing.resx">
+      <DependentUpon>FormC_borrowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_borrowingSide.resx">
+      <DependentUpon>FormC_borrowingSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_dashboard.resx">
+      <DependentUpon>FormC_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_myInfo.resx">
+      <DependentUpon>FormC_myInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_wishlist.resx">
+      <DependentUpon>FormC_wishlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_clients\FormC_wishlistSide.resx">
+      <DependentUpon>FormC_wishlistSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\LOGO.png" />
+    <None Include="Img\png-user-icon-customer-icon-1600.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
